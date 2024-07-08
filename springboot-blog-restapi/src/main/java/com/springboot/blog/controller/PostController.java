@@ -29,4 +29,10 @@ public class PostController {
     public List<PostDto> getAllPosts(){
         return postService.getAllPosts();
     }
+
+    // url : http://localhost:8080/api/posts/{id}
+    @GetMapping("/{id}")
+    public PostDto getPostById(@PathVariable(name = "id") long id){
+        return postService.getPostById(id);
+    }
 }
