@@ -1,6 +1,5 @@
 package com.springboot.blog.controller;
 
-import com.springboot.blog.entity.Post;
 import com.springboot.blog.payload.PostDto;
 import com.springboot.blog.service.PostService;
 import org.springframework.http.HttpStatus;
