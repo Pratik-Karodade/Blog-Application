@@ -25,9 +25,13 @@ public class PostController {
     }
 
     // url : http://localhost:8080/api/posts/allposts
-    @GetMapping("/allposts")
-    public List<PostDto> getAllPosts(){
-        return postService.getAllPosts();
+    // pagination and sorting
+    @GetMapping("all")
+    public List<PostDto> getAllPosts(
+            @RequestParam(value = "pageNo", defaultValue = "0",required = false) int pageNo,
+            @RequestParam(value = "pageSize", defaultValue = "10", required = false) int pageSize
+    ){
+        return postService.getAllPosts(pageNo,pageSize);
     }
 
     // url : http://localhost:8080/api/posts/{id}
