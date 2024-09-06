@@ -1,6 +1,5 @@
 package com.springboot.blog.controller;
 
-import com.springboot.blog.entity.Comment;
 import com.springboot.blog.payload.CommentDto;
 import com.springboot.blog.service.CommentService;
 import jakarta.validation.Valid;

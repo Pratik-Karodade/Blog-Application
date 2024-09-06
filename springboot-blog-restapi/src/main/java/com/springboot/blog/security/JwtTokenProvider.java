@@ -14,8 +14,6 @@ import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
 import java.security.Key;
-import java.security.PublicKey;
-import java.util.Base64;
 import java.util.Date;
 
 @Component
@@ -27,7 +25,7 @@ public class JwtTokenProvider {
 
     //method to create JWT token
 
-    public String jwtToken(Authentication authentication){
+    public String generateJwtToken(Authentication authentication){
         String name = authentication.getName();
         Date currentDate = new Date();
         Date expirationDate = new Date(currentDate.getTime() + jwtExpirationDate);
